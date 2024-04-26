@@ -1,2 +1,12 @@
 go mod init github.com/csoban373/db_example
+go get gorm.io/gorm
+
+mysql -u root 
+CREATE DATABASE people;
+USE people;
+
+mysql -u root -p people < schema.sql
+
+
+
 
