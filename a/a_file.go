@@ -2,10 +2,11 @@ package a
 
 import "fmt"
 
-func PrintExtra() {
-	fmt.Println("hi there")
+func PublicMethod() {
+	fmt.Println("access outside of package a!")
 }
 
-func privateMethod() {
-	fmt.Println("you can't access me outside of package a!")
+type Person struct {
+	Name   string
+	credit int
 }
