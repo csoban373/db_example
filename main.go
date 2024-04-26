@@ -11,12 +11,14 @@ func main() {
 	dbConn, err := db.SetupDB()
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
-	defer db.CloseDB(dbConn)
+	defer dbConn.Close()
 
 	err = db.TestDB(dbConn)
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 
 	allPeople, err := handler.GetAllPeople(dbConn)
