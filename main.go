@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	a "teaching/db/test/a"
+
+	a "github.com/csoban373/db_example/a"
 )
 
 func main() {
